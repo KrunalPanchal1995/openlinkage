@@ -24,13 +24,14 @@ A_LEN, B_LEN, C_LEN, D_LEN = 4.0, 1.0, 4.0, 5.0
 
 # %% [markdown]
 # ## Step 1: the pins
-# The frame (ground) holds two fixed pins: O2 at (0, 0) and O4 at (a, 0). The crank (length b)
-# turns about O2, so its free end A is at b(cos t, sin t). The pin B joins the coupler
-# (length c, from A) and the rocker (length d, from O4). So B is a point that is at distance c
-# from A AND at distance d from O4: the crossing point of two circles.
+# The frame (ground bar) has length a, with fixed pins O2 = (0, 0) and O4 = (a, 0). The crank
+# (length b) turns about O2, so its free end A is at b(cos t, sin t). To locate B, intersect a
+# radius-c circle centered at A with a radius-d circle centered at O4. There are usually two
+# intersections; branch=+1 selects the point on the left of the directed line from A to O4.
 #
-# Check by hand at t = 0: A = (1, 0), O4 = (4, 0). The distance A to O4 is 3. A triangle with
-# sides 3, c = 4, d = 5 is a 3-4-5 right triangle, so B is straight above A: B = (1, 4).
+# Check by hand at t = 0: A = (1, 0), O4 = (4, 0), so they are 3 units apart. The two circle
+# radii are c = 4 and d = 5. The 3-4-5 triangle places the selected intersection directly above
+# A, at B = (1, 4).
 
 # %%
 def circle_intersections(p0, r0, p1, r1):
