@@ -20,7 +20,7 @@
 A windscreen wiper, a walking toy and a bicycle suspension all move by rigid bars joined at pins. Nobody pushes every bar: one motor turns one bar (the crank) and all the others follow in a fixed way. Even stranger, a point on the middle bar (the coupler) draws a curve, and that curve can be shaped to be almost straight, which is how some walking machines move their feet. How can a few stiff bars, joined at four pins, turn one steady rotation into a rocking motion and a looping path?
 
 ## B. Concept and theory
-The frame (ground bar) holds two fixed pins O2 at (0, 0) and O4 at (a, 0). The crank (length b) turns about O2, so its free end A is at b(cos t, sin t). The coupler (length c) joins A to a pin B, and the rocker (length d) joins B to O4. So B is at distance c from A and at distance d from O4: it is where two circles cross. Two circles usually cross in two points, so there are two ways to assemble the linkage; we take the one to the left of the line from A to O4. Once the crank angle t is chosen, A, B and the rocker angle are all fixed: the linkage has one freedom. A plane bar has 3 freedoms (x, y, angle); a pin removes 2, and the ground bar is fixed, so n bars and j pins leave M = 3(n - 1) - 2j freedoms. For the four-bar, M = 3*3 - 2*4 = 1. At the extreme positions of the rocker, the crank and the coupler lie on one line, so B is at distance c + b or c - b from O2; the law of cosines then gives the rocker's swing.
+The frame (ground bar) has length a, with its fixed pins at O2 = (0, 0) and O4 = (a, 0). The crank (length b) turns about O2, so its free end A is at b(cos t, sin t). The coupler (length c) joins A to a pin B, and the rocker (length d) joins B to O4. So B is at distance c from A and at distance d from O4: it is where two circles cross. To locate B, draw a circle of radius c centered at A and another of radius d centered at O4. They usually cross at two points, giving two possible assemblies; this lesson selects the point on the left of the directed line from A to O4. Once the crank angle t is chosen, A, B and the rocker angle are all fixed: the linkage has one freedom. A plane bar has 3 freedoms (x, y, angle); a pin removes 2, and the ground bar is fixed, so n bars and j pins leave M = 3(n - 1) - 2j freedoms. For the four-bar, M = 3*3 - 2*4 = 1. At each rocker extreme, the crank and coupler lie on one straight line. The distance from O2 to B is c + b when they point in the same direction, or |c - b| when they fold back. Apply the law of cosines to triangle O2-O4-B to find both rocker angles; their difference is the swing.
 
 | Symbol | Meaning | Unit |
 |---|---|---|
@@ -43,7 +43,7 @@ $$ \mathbf A=b(\cos t,\ \sin t),\qquad \lVert\mathbf B-\mathbf A\rVert=c,\qquad 
 
 $$ M=3(n-1)-2j\qquad(\text{four-bar: }3\cdot 3-2\cdot 4=1) $$
 
-$$ \cos\psi=\frac{a^2+d^2-r^2}{2ad},\qquad r=c+b\ \text{or}\ c-b\ \text{(the two extreme positions)} $$
+$$ \cos\psi=\frac{a^2+d^2-r^2}{2ad},\qquad r=c+b\ \text{or}\ |c-b|\ \text{(the two extreme positions)} $$
 
 $$ \text{swing}=\left|\psi_{c+b}-\psi_{c-b}\right| $$
 
